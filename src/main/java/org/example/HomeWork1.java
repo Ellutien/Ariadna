@@ -39,7 +39,7 @@ public class HomeWork1 {
                 result = array[i];
             }
         }
-        System.out.println(Arrays.toString(arr));
+        System.out.print("Closest to average: ");
         System.out.println(result);
 
         //3) Опять тот же массив - разверните его) хочу чтобы первый элемент стал последним, а последний первым и так далее
