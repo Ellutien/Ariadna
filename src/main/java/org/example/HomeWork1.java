@@ -18,7 +18,7 @@ public class HomeWork1 {
         }
         med = sum / array.length;
         System.out.println("Array: " + Arrays.toString(array) + "\n" +
-                "The average value: " + med)
+                "The average value of array: " + med)
         ;
 
         //2) Взять тот же массив, что и в первом задании и найти число, которое максимально близко расположено к среднему значению и вывести его в консоль
