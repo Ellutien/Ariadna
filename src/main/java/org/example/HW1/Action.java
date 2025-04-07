@@ -1,9 +1,11 @@
 package org.example.HW1;
 
 public interface Action {
+    void receivePatients();
+    void sendForCure();
+    void isSick();
+    default void print(String string){
 
-    public boolean receivePatients = true;
-    public boolean sendForCure = true;
-    public boolean isSick = true;
+    }
 
 }

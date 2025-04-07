@@ -2,13 +2,13 @@ package org.example.HW1;
 
 import java.util.Objects;
 
-public class Doctor implements Action {
+public class Doctor implements DoctorAction, Action {
 
-    public static int id;
-    public String lastName;
-    public String name;
-    public String fathersName;
-    public int roomN;
+    static int id;
+    protected String lastName;
+    protected String name;
+    protected String fathersName;
+    protected int roomN;
 
     public int getId() {
         return id;
@@ -29,11 +29,6 @@ public class Doctor implements Action {
 
     }
 
-    public static void main(String[] args) {
-        Doctor newt = new Doctor("Gregory", "House", "Wolf", 1);
-        newt.printInfo();
-    }
-
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -44,5 +39,30 @@ public class Doctor implements Action {
     @Override
     public int hashCode() {
         return Objects.hash(lastName, name, fathersName, roomN);
+    }
+
+    @Override
+    public void receivePatients() {
+
+    }
+
+    @Override
+    public void sendForCure() {
+
+    }
+
+    @Override
+    public void isSick() {
+        System.out.println("Ой как плохо, надо домой!");
+    }
+
+    @Override
+    public void health() {
+
+    }
+
+    @Override
+    public void recommend() {
+
     }
 }

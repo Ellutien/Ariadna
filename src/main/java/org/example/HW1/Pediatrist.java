@@ -2,15 +2,16 @@ package org.example.HW1;
 
 import java.util.Objects;
 
-public class Pediatrist extends Doctor {
+public class Pediatrist extends Doctor implements DoctorAction{
 
+    private final int id;
     public String kidsAge;
     public final String robeColor = "blue";
     public String speciality = String.valueOf(Speciality.PEDIATRIST);
 
     public Pediatrist(String name, String lastName, String fathersName, int roomN, String kidsAge) {
         super(name, lastName, fathersName, roomN);
-        this.id = Doctor.id;
+        this.id = getId();
         this.kidsAge = kidsAge;
     }
 
@@ -35,5 +36,15 @@ public class Pediatrist extends Doctor {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), kidsAge, robeColor, speciality);
+    }
+
+    @Override
+    public void health() {
+        System.out.println("Померяли температуру, показало 39, для ребенка самое то, растущий организм,Спарта!");
+    }
+
+    @Override
+    public void recommend() {
+        System.out.println("Скормить мороженое!");
     }
 }

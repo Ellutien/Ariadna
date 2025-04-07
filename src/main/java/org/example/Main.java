@@ -3,6 +3,7 @@ package org.example;
 import org.example.HW1.*;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -14,14 +15,22 @@ public class Main {
         mine.printPatient();
         other.printPatient();
 
-        Therapist house = new Therapist("Gregory", "House", "Wolf", 125, "Kardio", true, 4);
-        Surgeon talent = new Surgeon("Andrey", "Bikov", "Evgenievich", 45, "18-99 y.o. ", 8);
-        Pediatrist newt = new Pediatrist("Newman", "Godwill", "James", 654, "2-6");
-        Neurologist neiron = new Neurologist("Dolce", "Vitto", "Angus", 56, 5, "Brain injuries", true);
-        house.printInfo();
-        talent.printInfo();
-        newt.printInfo();
-        neiron.printInfo();
+        Doctor house = new Therapist("Gregory", "House", "Wolf", 125, "Kardio", true, 4);
+        DoctorAction talent = new Surgeon("Andrey", "Bikov", "Evgenievich", 45, "18-99 y.o. ", 8, true);
+        DoctorAction newt = new Pediatrist("Newman", "Godwill", "James", 654, "2-6");
+        DoctorAction neiron = new Neurologist("Dolce", "Vitto", "Angus", 56, 5, "Brain injuries", true);
+
+        house.health();
+        house.isSick();
+        talent.health();
+        newt.health();
+
+
+        //        house.printInfo();
+//        talent.printInfo();
+//        newt.printInfo();
+//        neiron.printInfo();
+
 
     }
 

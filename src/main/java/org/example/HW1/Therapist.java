@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Therapist extends Doctor {
 
+    public int id;
     public String profile;
     public final String robeColor = "green";
     boolean isAllowedToSignRecipies;
@@ -13,7 +14,7 @@ public class Therapist extends Doctor {
 
     public Therapist(String name, String lastName, String fathersName, int roomN, String profile, boolean isAllowedToSignRecipies, int numberOfAssistants) {
         super(name, lastName, fathersName, roomN);
-        this.id = Doctor.id;
+        this.id = getId();
         this.profile = profile;
         this.isAllowedToSignRecipies = isAllowedToSignRecipies;
         this.numberOfAssistants = numberOfAssistants;
@@ -40,5 +41,30 @@ public class Therapist extends Doctor {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), profile, robeColor, isAllowedToSignRecipies, numberOfAssistants);
+    }
+
+//    @Override
+//    public void health() {
+//        System.out.println("Померял давление.");
+//    }
+//
+//    @Override
+//    public void recommend() {
+//        System.out.println("Можно в космос");
+//    }
+//
+//    @Override
+//    public void receivePatients() {
+//
+//    }
+//
+//    @Override
+//    public void sendForCure() {
+//
+//    }
+//
+    @Override
+    public void isSick() {
+        System.out.println("Ой как плохо");
     }
 }

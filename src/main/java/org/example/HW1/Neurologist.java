@@ -2,8 +2,9 @@ package org.example.HW1;
 
 import java.util.Objects;
 
-public class Neurologist extends Doctor {
+public class Neurologist extends Doctor implements DoctorAction{
 
+    private final int id;
     public int experience;
     public boolean hasALittleHammer;
     public String additionalProfile;
@@ -12,7 +13,7 @@ public class Neurologist extends Doctor {
 
     public Neurologist(String name, String lastName, String fathersName, int roomN, int experience, String additionalProfile, boolean hasALittleHammer) {
         super(name, lastName, fathersName, roomN);
-        this.id = Doctor.id;
+        this.id = getId();
         this.experience = experience;
         this.additionalProfile = additionalProfile;
         this.hasALittleHammer = hasALittleHammer;
@@ -40,5 +41,15 @@ public class Neurologist extends Doctor {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), experience, hasALittleHammer, additionalProfile, robeColor, speciality);
+    }
+
+    @Override
+    public void health() {
+        System.out.println("Я поступал молотком по лбу, у пациента все хорошо!");
+    }
+
+    @Override
+    public void recommend() {
+        System.out.println("Выпей аспирин");
     }
 }
