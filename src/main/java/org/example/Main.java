@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.HW1.Patient;
+
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
@@ -34,6 +36,12 @@ public class Main {
             }
         }
         System.out.println(Arrays.toString(arr));
+
+        Patient mine = new Patient("Ivanov", "Petr", "Sidorovich", 40);
+        Patient other = new Patient("Bobrov", "Maksim", "Grigor'evich", 48);
+        mine.printPatient();
+        other.printPatient();
+
 
     }
 
