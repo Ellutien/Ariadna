@@ -2,7 +2,7 @@ package org.example.HW1;
 
 import java.util.Objects;
 
-public class Doctor {
+public class Doctor implements Action {
 
     public static int id;
     public String lastName;

@@ -18,12 +18,10 @@ public class Main {
         Surgeon talent = new Surgeon("Andrey", "Bikov", "Evgenievich", 45, "18-99 y.o. ", 8);
         Pediatrist newt = new Pediatrist("Newman", "Godwill", "James", 654, "2-6");
         Neurologist neiron = new Neurologist("Dolce", "Vitto", "Angus", 56, 5, "Brain injuries", true);
-
         house.printInfo();
         talent.printInfo();
         newt.printInfo();
         neiron.printInfo();
-
 
     }
 
