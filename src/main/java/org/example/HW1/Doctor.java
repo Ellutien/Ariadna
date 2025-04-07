@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Doctor implements DoctorAction, Action {
 
-    static int id;
+    static int id = 0;
     protected String lastName;
     protected String name;
     protected String fathersName;
@@ -26,7 +26,6 @@ public class Doctor implements DoctorAction, Action {
         System.out.println("\n" + "Doctor's name: " + lastName + " " + name + fathersName +";\n" +
                 "Doctor's ID: " + id + ";\n" +
                 "Doctor's room: " + roomN + ";");
-
     }
 
     @Override
@@ -42,27 +41,15 @@ public class Doctor implements DoctorAction, Action {
     }
 
     @Override
-    public void receivePatients() {
-
-    }
-
-    @Override
-    public void sendForCure() {
-
-    }
-
-    @Override
     public void isSick() {
         System.out.println("Ой как плохо, надо домой!");
     }
 
     @Override
     public void health() {
-
     }
 
     @Override
     public void recommend() {
-
     }
 }

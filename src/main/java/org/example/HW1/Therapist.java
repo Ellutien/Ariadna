@@ -53,16 +53,6 @@ public class Therapist extends Doctor {
 //        System.out.println("Можно в космос");
 //    }
 //
-//    @Override
-//    public void receivePatients() {
-//
-//    }
-//
-//    @Override
-//    public void sendForCure() {
-//
-//    }
-//
     @Override
     public void isSick() {
         System.out.println("Ой как плохо");

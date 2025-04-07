@@ -16,7 +16,7 @@ public class Main {
         other.printPatient();
 
         Doctor house = new Therapist("Gregory", "House", "Wolf", 125, "Kardio", true, 4);
-        DoctorAction talent = new Surgeon("Andrey", "Bikov", "Evgenievich", 45, "18-99 y.o. ", 8, true);
+        Doctor talent = new Surgeon("Andrey", "Bikov", "Evgenievich", 45, "18-99 y.o. ", 8, true);
         DoctorAction newt = new Pediatrist("Newman", "Godwill", "James", 654, "2-6");
         DoctorAction neiron = new Neurologist("Dolce", "Vitto", "Angus", 56, 5, "Brain injuries", true);
 
@@ -24,6 +24,8 @@ public class Main {
         house.isSick();
         talent.health();
         newt.health();
+        house.printInfo();
+        talent.printInfo();
 
 
         //        house.printInfo();
