@@ -10,18 +10,21 @@ public class Surgeon extends Doctor {
     public int yearsOfExp;
     public String speciality = String.valueOf(Speciality.SURGEON);
 
-    public Surgeon(String name, String lastName, String fathersName, int roomN, String patientsByAge) {
+    public Surgeon(String name, String lastName, String fathersName, int roomN, String patientsByAge, int yearsOfExp) {
         super(name, lastName, fathersName, roomN);
-        this.id = Doctor.id;
         this.patientsByAge = patientsByAge;
+        this.haveSurgeryAssistant = haveSurgeryAssistant;
+        this.yearsOfExp = yearsOfExp;
+        this.id = Doctor.id;
     }
 
     @Override
     public void printInfo() {
-        System.out.println("Doctor's name: " + lastName + " " + name + " " + fathersName +";\n" +
-                "Doctor's ID: " + id + " and " + robeColor + " color of the robe;\n" +
+        System.out.println("\n" + "Doctor's name: " + lastName + " " + name + " " + fathersName +";\n" +
+                "Doctor's ID: " + id + "\n" +
+                "Doctor has " + robeColor + " color of the robe;\n" +
                 "Doctor's room: " + roomN + ";\n" +
-                "Profile of the doctor: " + speciality + ";" +
+                "Profile of the doctor: " + speciality + ";\n" +
                 "Experience of the doctor: " + yearsOfExp + " years with " + patientsByAge + " patients");
     }
 

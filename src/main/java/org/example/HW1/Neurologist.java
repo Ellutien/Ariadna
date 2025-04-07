@@ -20,11 +20,12 @@ public class Neurologist extends Doctor {
 
     @Override
     public void printInfo() {
-        System.out.println("Doctor's name: " + lastName + " " + name + " " + fathersName +";\n" +
-                "Doctor's ID: " + id + " and " + robeColor + " color of the robe;\n" +
+        System.out.println("\n" + "Doctor's name: " + lastName + " " + name + " " + fathersName +";\n" +
+                "Doctor's ID: " + id + "\n" +
+                "Doctor has " + robeColor + " color of the robe;\n" +
                 "Doctor's room: " + roomN + ";\n" +
-                "Profile of the doctor: " + speciality + ";" +
-                "Experience of the doctor: " + experience + " years and he has additional profile: " + additionalProfile +
+                "Speciality of the doctor: " + speciality + ";\n" +
+                "Experience of the doctor: " + experience + " years and he has additional profile: " + additionalProfile + "\n" +
                 "Does the doctor has a little hammer: " + hasALittleHammer );
     }
 

@@ -16,10 +16,11 @@ public class Pediatrist extends Doctor {
 
     @Override
     public void printInfo() {
-        System.out.println("Doctor's name: " + lastName + " " + name + " " + fathersName +";\n" +
-                "Doctor's ID: " + id + " and " + robeColor + " color of the robe;\n" +
+        System.out.println("\n" + "Doctor's name: " + lastName + " " + name + " " + fathersName +";\n" +
+                "Doctor's ID: " + id + "\n" +
+                "Doctor has " + robeColor + " color of the robe;\n" +
                 "Doctor's room: " + roomN + ";\n" +
-                "Profile of the doctor: " + speciality + ";" +
+                "Profile of the doctor: " + speciality + ";\n" +
                 "Patients of the doctor: kids of " + kidsAge + " years of age");
     }
 

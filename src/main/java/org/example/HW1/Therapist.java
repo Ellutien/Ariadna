@@ -21,10 +21,12 @@ public class Therapist extends Doctor {
 
     @Override
     public void printInfo() {
-        System.out.println("Doctor's name: " + lastName + " " + name + fathersName +";\n" +
-                "Doctor's ID: " + id + " and " + robeColor + " color of the robe;\n" +
+        System.out.println("\n" + "Doctor's name: " + lastName + " " + name + " " + fathersName +";\n" +
+                "Doctor's speciality: " + speciality + "\n" +
+                "Doctor's ID: " + id + "\n" +
+                "Doctor has " + numberOfAssistants + " assistants and " + robeColor + " color of the robe;\n" +
                 "Doctor's room: " + roomN + ";\n" +
-                "Profile of the doctor: " + speciality + ";");
+                "Profile of the doctor: " + profile + ";");
     }
 
     @Override

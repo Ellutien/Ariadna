@@ -23,9 +23,9 @@ public class Doctor {
     }
 
     public void printInfo() {
-        System.out.println("Doctor's name: " + lastName + " " + name + fathersName +";\n" +
+        System.out.println("\n" + "Doctor's name: " + lastName + " " + name + fathersName +";\n" +
                 "Doctor's ID: " + id + ";\n" +
-                "Doctor's room: " + roomN + ";\n");
+                "Doctor's room: " + roomN + ";");
 
     }
 
