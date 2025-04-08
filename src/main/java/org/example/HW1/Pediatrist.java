@@ -40,7 +40,7 @@ public class Pediatrist extends Doctor implements DoctorAction{
 
     @Override
     public void health() {
-        System.out.println("Померяли температуру, показало 39, для ребенка самое то, растущий организм,Спарта!");
+        System.out.println("Померяли температуру, показало 39, для ребенка самое то, растущий организм, Спарта!");
     }
 
     @Override

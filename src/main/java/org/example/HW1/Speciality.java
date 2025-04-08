@@ -15,9 +15,7 @@ public enum Speciality {
 
     @Override
     public String toString() {
-        return "Специализация{" +
-                "text='" + text + '\'' +
-                '}';
+        return text;
     }
 }
 

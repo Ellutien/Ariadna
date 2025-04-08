@@ -43,18 +43,14 @@ public class Therapist extends Doctor {
         return Objects.hash(super.hashCode(), profile, robeColor, isAllowedToSignRecipies, numberOfAssistants);
     }
 
-//    @Override
-//    public void health() {
-//        System.out.println("Померял давление.");
-//    }
-//
-//    @Override
-//    public void recommend() {
-//        System.out.println("Можно в космос");
-//    }
-//
     @Override
-    public void isSick() {
-        System.out.println("Ой как плохо");
+    public void health() {
+        System.out.println("Померял давление.");
     }
+
+    @Override
+    public void recommend() {
+        System.out.println("Можно в космос");
+    }
+
 }

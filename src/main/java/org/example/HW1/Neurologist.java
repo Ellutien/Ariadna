@@ -45,7 +45,7 @@ public class Neurologist extends Doctor implements DoctorAction{
 
     @Override
     public void health() {
-        System.out.println("Я поступал молотком по лбу, у пациента все хорошо!");
+        System.out.println("Я постучал молотком по лбу, у пациента все хорошо!");
     }
 
     @Override

@@ -2,7 +2,7 @@ package org.example.HW1;
 
 public class Appointment {
 
-    public static int id = 0;
+    static int id = 0;
     public int patientId;
     public int doctorId;
 
