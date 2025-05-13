@@ -50,29 +50,70 @@ public class LatinMorseToKirillic {
         morseCode.put("————•", '9');
         morseCode.put("/", ' ');
 
+        Map<String, Character> twoCharMorseCode = new HashMap<>();
+        twoCharMorseCode.put("••••,•—•—", 'Ч');
+        twoCharMorseCode.put("••••,•••", 'Ш');
+        twoCharMorseCode.put("•,•—", 'Э');
+        twoCharMorseCode.put("••—,—•——•", 'Ю');
+        twoCharMorseCode.put("•—,—•——•", 'Я');
+
         StringBuilder result = new StringBuilder();
         String symbol;
 
         do {
-            if (str.contains(",")) {
-                symbol = str.substring(0, str.indexOf(","));
-            } else {
+            if (str.contains(",")) { //пока в строке еще остаются запятые - беру символ морзянки от начала строки до запятой не включая её
+                symbol = str.substring(0, (str.indexOf(",") + 1 + str.indexOf(",")));
+            } else { //когда запятых не осталось - т.е. последний символ - беру просто всю оставшуюся строку с последним символом
                 symbol = str;
             }
-            for (Map.Entry<String, Character> value : morseCode.entrySet()) {
-                if (value.getKey().equals(symbol)) {
-                    result.append(value.getValue());
-                    break;
+            if (twoCharMorseCode.keySet().contains(symbol)) {
+                for (Map.Entry<String, Character> value : twoCharMorseCode.entrySet()) {
+                    if (value.getKey().equals(symbol)) {//ищем символ в мапе
+                        result.append(value.getValue());//добавляем его значение в стрингбилдер
+                        break;
+                    }
+                }
+            } else {
+                symbol = str.substring(0, str.indexOf(","));
+                for (Map.Entry<String, Character> value : morseCode.entrySet()) {
+                    if (value.getKey().equals(symbol)) {
+                        result.append(value.getValue());
+                        break;
+                    }
                 }
             }
             if (symbol.equals(str)) {
-                str = "";
+                str = "";//если символ последний в строке был - ставим пустое значение
             } else {
-                str = str.substring(str.indexOf(",") + 1);
+                if (symbol.contains(",")) {
+                    str = str.substring((str.indexOf(",") + 1 + str.indexOf(",")) + 1); //если нет - обрезаем строку, удаляя символ, который только что нашли
+                } else {
+                    str = str.substring(str.indexOf(",") + 1);
+                }
             }
         } while (!str.isEmpty());
 
-        StringBuilder result1 = new StringBuilder();
+
+//        do {
+//            if (str.contains(",")) { //пока в строке еще остаются запятые - беру символ морзянки от начала строки до запятой не включая её
+//                symbol = str.substring(0, str.indexOf(","));
+//            } else { //когда запятых не осталось - т.е. последний символ - беру просто всю оставшуюся строку с последним символом
+//                symbol = str;
+//            }
+//            for (Map.Entry<String, Character> value : morseCode.entrySet()) {
+//                if (value.getKey().equals(symbol)) {//ищем символ в мапе
+//                    result.append(value.getValue());//добавляем его значение в стрингбилдер
+//                    break;
+//                }
+//            }
+//            if (symbol.equals(str)) {
+//                str = "";//если символ последний в строке был - ставим пустое значение
+//            } else {
+//                str = str.substring(str.indexOf(",") + 1); //если нет - обрезаем строку, удаляя символ, который только что нашли
+//            }
+//        } while (!str.isEmpty()); //и делаем цикл пока символ не пустой
+
+        StringBuilder result1 = new StringBuilder(); //и тут переворачиваем строку, была зеркальная
         for (int i = (result.length() - 1); i > -1; i--) {
             result1.append(result.charAt(i));
         }
