@@ -19,7 +19,7 @@ public class CubePoker {
                 System.out.println("Too many cubes, you are cheater!");
             } else {
                 System.out.println("You entered " + cubesQuantity + " dices. Throwing your dices...");
-                Thread.sleep(3000);
+                Thread.sleep(2000);
                 System.out.println("Your results are: ");
                 for (int i = 0; i < cubesQuantity; i++) {
                     Random r = new Random();
